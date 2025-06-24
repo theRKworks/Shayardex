@@ -12,7 +12,7 @@ genai.configure(api_key=api_key)
 
 def get_poetry_feedback(poem):
     """Calls Google Gemini API to get feedback on the given poem."""
-    model = genai.GenerativeModel("gemini-1.5-pro")
+    model = genai.GenerativeModel("gemini-2.0-flash-lite")
     response = model.generate_content(f"Here is a poem:\n{poem}\nProvide feedback on its structure, imagery, and theme.")
     return response.text
 
